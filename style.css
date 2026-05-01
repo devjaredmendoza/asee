@@ -51,11 +51,12 @@ nav a {
 .grid-item {
     position: relative;
     background-color: #111;
-    border-radius: 20px; /* Bordes redondeados consistentes */
-    overflow: hidden;    /* Esencial para que el recorte funcione */
+    border-radius: 20px;
+    overflow: hidden;
     display: flex;
     flex-direction: column;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 450px; /* ALTURA FIJA: Esto hace que todos los cuadros sean iguales */
+    transition: transform 0.3s ease;
 }
 
 /* Estilo para las Imágenes */
@@ -72,24 +73,26 @@ nav a {
     border: none !important;
     box-shadow: none !important;
     width: 100% !important;
-    min-width: 100% !important;
-    /* RECORTE: Sube el video y corta la parte de abajo (descripcion/musica) */
-    margin: -15px 0 -95px 0 !important; 
-    border-radius: 20px !important;
+    margin: -20px 0 0 0 !important; /* Solo lo subimos un poco */
 }
 
 /* Título que funciona como "máscara" inferior */
 .titulo-tatuaje {
+    position: absolute; /* Se pega al fondo del cuadro */
+    bottom: 0;
+    left: 0;
+    right: 0;
     text-align: center;
     font-size: 0.75rem;
-    padding: 15px 5px;
-    color: #888;
+    padding: 20px 5px 10px 5px; /* Más padding arriba para el degradado */
+    color: #fff;
     text-transform: uppercase;
     letter-spacing: 1.5px;
-    background: #111; /* Fondo sólido para tapar restos del video */
+    
+    /* Degradado negro para borrar cualquier rastro de TikTok */
+    background: linear-gradient(transparent, rgba(0,0,0,0.9) 50%, #000); 
     margin: 0;
-    z-index: 5;
-    position: relative;
+    z-index: 10;
 }
 
 /* --- 5. INTERACCIÓN (HOVER) --- */

@@ -10,23 +10,18 @@ async function cargarGaleria() {
             div.className = 'grid-item';
 
             if (item.tipo === 'imagen') {
-                // Renderiza imagen local optimizada
-                div.innerHTML = `
-                    <img src="${item.url}" alt="${item.titulo}" loading="lazy">
-                    <p class="titulo-tatuaje">${item.titulo}</p>
-                `;
-            } else if (item.tipo === 'video') {
-                // Renderiza video de TikTok (usando su sistema de embed)
-                div.innerHTML = `
-                                    <blockquote class="tiktok-embed" 
-                                        data-video-id="${item.url}" 
-                                        data-embed-from="embed_page"
-                                        style="max-width: 605px; min-width: 325px;">
-                                        <section>
-                                            </section>
-                                    </blockquote>
-                                `;
-            }
+    div.innerHTML = `
+        <img src="${item.url}" alt="${item.titulo}">
+        <p class="titulo-tatuaje">${item.titulo}</p>
+    `;
+} else if (item.tipo === 'video') {
+    div.innerHTML = `
+        <blockquote class="tiktok-embed" data-video-id="${item.url}" style="width: 100%; margin: 0;">
+            <section></section>
+        </blockquote>
+        <p class="titulo-tatuaje">${item.titulo}</p>
+    `;
+}
             contenedor.appendChild(div);
         });
 
