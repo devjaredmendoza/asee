@@ -3,22 +3,27 @@
     {
       "tipo": "imagen",
       "url": "resources/bird.jpeg",
-      "titulo": "Diseño original"
+      "titulo": "Diseño disponible"
     },
     {
       "tipo": "imagen",
       "url": "resources/bird2.jpeg",
-      "titulo": "Realismo en sombras"
+      "titulo": "Diseño disponible"
     },
     {
       "tipo": "imagen",
       "url": "resources/sheep.jpeg",
-      "titulo": "Realismo en sombras"
+      "titulo": "Diseño disponible"
     },
     {
       "tipo": "imagen",
       "url": "resources/flower_shoulder.jpeg",
       "titulo": "fineline"
+    },
+    {
+      "tipo": "video",
+      "url": "https://vt.tiktok.com/ZS95BB7gj/",
+      "titulo": "blog 3 tatuajitos"
     }
     
   ]
