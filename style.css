@@ -1,41 +1,30 @@
-/* Estilos Base - Fondo limpio para que resalte el arte [cite: 58] */
+/* --- 1. ESTILOS BASE Y ESTRUCTURA --- */
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: #000;
     color: #fff;
     
-    /* Agregamos esto para el footer fijo */
+    /* Sticky Footer: empuja el footer al final */
     display: flex;
     flex-direction: column;
-    min-height: 100vh; /* Hace que el cuerpo ocupe al menos toda la altura de la pantalla */
+    min-height: 100vh;
 }
+
 main {
-    flex: 1; /* Esto hace que la galería "crezca" y empuje al footer al fondo */
+    flex: 1; /* Ocupa el espacio disponible para que el footer baje */
 }
 
-/* Estiliza el footer para que se vea profesional */
-footer {
-    padding: 1.5rem;
-    background-color: #111; /* Un gris muy oscuro para diferenciarlo */
-    text-align: center;
-    border-top: 1px solid #333;
-}
-
-footer p {
-    margin: 0;
-    font-size: 0.8rem;
-    color: #888;
-}
-
-footer a {
-    color: #25d366; /* Color verde WhatsApp */
-    text-decoration: none;
-}
-
+/* --- 2. HEADER Y NAVEGACIÓN --- */
 header {
-    padding: 2rem;
+    padding: 2.5rem 1rem;
     text-align: center;
+}
+
+header img {
+    max-width: 250px; /* Ajusta según el tamaño de tu logo */
+    height: auto;
+    margin-bottom: 1rem;
 }
 
 nav a {
@@ -43,40 +32,101 @@ nav a {
     margin: 0 15px;
     text-decoration: none;
     font-weight: bold;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
-/* El Grid "Mágico" [cite: 61] */
+/* --- 3. EL GRID MÁGICO (GALERÍA) --- */
 .grid-container {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    grid-gap: 15px;
-    padding: 15px;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    grid-gap: 25px;
+    padding: 20px;
+    max-width: 1400px;
+    margin: 0 auto;
 }
 
+/* Contenedor universal para Fotos y Videos */
+.grid-item {
+    position: relative;
+    background-color: #111;
+    border-radius: 20px; /* Bordes redondeados consistentes */
+    overflow: hidden;    /* Esencial para que el recorte funcione */
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Estilo para las Imágenes */
 .grid-item img {
     width: 100%;
-    height: auto;
+    height: 100%;
+    object-fit: cover;
     display: block;
-    border-radius: 8px;
-    transition: transform 0.3s ease; /* Efecto suave */
+    border-radius: 20px;
 }
 
-/* Efecto Hover para sensación profesional [cite: 62] */
-.grid-item img:hover {
+/* --- 4. TRUCO DE RECORTE PARA TIKTOK --- */
+.tiktok-embed {
+    border: none !important;
+    box-shadow: none !important;
+    width: 100% !important;
+    min-width: 100% !important;
+    /* RECORTE: Sube el video y corta la parte de abajo (descripcion/musica) */
+    margin: -15px 0 -95px 0 !important; 
+    border-radius: 20px !important;
+}
+
+/* Título que funciona como "máscara" inferior */
+.titulo-tatuaje {
+    text-align: center;
+    font-size: 0.75rem;
+    padding: 15px 5px;
+    color: #888;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    background: #111; /* Fondo sólido para tapar restos del video */
+    margin: 0;
+    z-index: 5;
+    position: relative;
+}
+
+/* --- 5. INTERACCIÓN (HOVER) --- */
+.grid-item:hover {
     transform: scale(1.03);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.5);
     filter: brightness(1.1);
 }
 
-.video-item {
-    background: #111;
-    border-radius: 8px;
-    overflow: hidden;
-}
-.titulo-tatuaje {
+/* --- 6. FOOTER --- */
+footer {
+    padding: 2rem;
+    background-color: #0a0a0a;
     text-align: center;
-    font-size: 0.9rem;
-    margin-top: 10px;
-    color: #aaa; /* Gris claro para que no distraiga del arte */
-    text-transform: uppercase;
-    letter-spacing: 1px;
+    border-top: 1px solid #222;
+}
+
+footer p {
+    margin: 0;
+    font-size: 0.8rem;
+    color: #666;
+}
+
+footer a {
+    color: #25d366; /* Verde WhatsApp */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* --- 7. RESPONSIVE (MÓVILES) --- */
+@media (max-width: 600px) {
+    .grid-container {
+        grid-template-columns: 1fr; /* Una sola columna en celulares */
+        padding: 10px;
+    }
+    
+    header img {
+        max-width: 180px;
+    }
 }

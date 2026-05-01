@@ -18,10 +18,14 @@ async function cargarGaleria() {
             } else if (item.tipo === 'video') {
                 // Renderiza video de TikTok (usando su sistema de embed)
                 div.innerHTML = `
-                    <blockquote class="tiktok-embed" data-video-id="${item.url}" style="max-width: 605px;min-width: 325px;">
-                        <section></section>
-                    </blockquote>
-                `;
+                                    <blockquote class="tiktok-embed" 
+                                        data-video-id="${item.url}" 
+                                        data-embed-from="embed_page"
+                                        style="max-width: 605px; min-width: 325px;">
+                                        <section>
+                                            </section>
+                                    </blockquote>
+                                `;
             }
             contenedor.appendChild(div);
         });
