@@ -1,0 +1,55 @@
+/* Estilos Base - Fondo limpio para que resalte el arte [cite: 58] */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #000; /* Fondo negro como el ejemplo de Martinez */
+    color: #fff;
+}
+
+header {
+    padding: 2rem;
+    text-align: center;
+}
+
+nav a {
+    color: #fff;
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* El Grid "Mágico" [cite: 61] */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-gap: 15px;
+    padding: 15px;
+}
+
+.grid-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+    transition: transform 0.3s ease; /* Efecto suave */
+}
+
+/* Efecto Hover para sensación profesional [cite: 62] */
+.grid-item img:hover {
+    transform: scale(1.03);
+    filter: brightness(1.1);
+}
+
+.video-item {
+    background: #111;
+    border-radius: 8px;
+    overflow: hidden;
+}
+.titulo-tatuaje {
+    text-align: center;
+    font-size: 0.9rem;
+    margin-top: 10px;
+    color: #aaa; /* Gris claro para que no distraiga del arte */
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}

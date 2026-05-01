@@ -1,0 +1,25 @@
+{
+  "trabajos": [
+    {
+      "tipo": "imagen",
+      "url": "resources/bird.jpeg",
+      "titulo": "Diseño original"
+    },
+    {
+      "tipo": "imagen",
+      "url": "resources/bird2.jpeg",
+      "titulo": "Realismo en sombras"
+    },
+    {
+      "tipo": "imagen",
+      "url": "resources/sheep.jpeg",
+      "titulo": "Realismo en sombras"
+    },
+    {
+      "tipo": "imagen",
+      "url": "resources/flower_shoulder.jpeg",
+      "titulo": "fineline"
+    }
+    
+  ]
+}
