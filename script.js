@@ -86,3 +86,16 @@ function cerrarModal() {
     document.getElementById('modal-galeria').style.display = "none";
     document.getElementById('modal-body').innerHTML = ""; // Limpiamos para detener videos
 }
+function toggleFab() {
+    const container = document.querySelector('.fab-container');
+    const icon = document.getElementById('fab-icon');
+    
+    container.classList.toggle('active');
+    
+    // Cambiar el texto opcionalmente si no quieres usar la rotación CSS
+    if (container.classList.contains('active')) {
+        icon.innerText = '💖'; // La rotación en CSS lo hará parecer una X
+    } else {
+        icon.innerText = '💖';
+    }
+}

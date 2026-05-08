@@ -212,3 +212,80 @@ footer a {
 .grid-item {
     cursor: pointer;
 }
+/* --- 9. MENÚ FLOTANTE (HACIA ARRIBA) --- */
+.fab-container {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: flex;
+    flex-direction: column; /* Apila hacia arriba */
+    align-items: center;
+    gap: 12px;
+    z-index: 2000;
+}
+
+.fab-options {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 5px;
+    
+    /* Efecto de salida desde abajo hacia arriba */
+    transform: translateY(20px) scale(0);
+    transform-origin: bottom; 
+    opacity: 0;
+    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    pointer-events: none;
+}
+
+.fab-container.active .fab-options {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.fab-main {
+    width: 55px;
+    height: 55px;
+    background-color: #1a1a1a; /* Fondo oscuro para que resalte el rosa */
+    color: #ff69b4;           /* Rosa HotPink para el corazón */
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 15px rgba(255, 105, 180, 0.3); /* Sombra rosa suave */
+    cursor: pointer;
+    font-size: 28px; /* Tamaño del corazón */
+    transition: all 0.4s ease;
+    z-index: 2001;
+    border: 2px solid #ff69b4; /* Borde rosa opcional para más estilo */
+}
+
+.fab-option {
+    width: 45px;
+    height: 45px;
+    background-color: #1a1a1a;
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: bold;
+    border: 1px solid #333;
+    transition: transform 0.2s ease;
+}
+
+.fab-option:hover {
+    background-color: #333;
+    transform: scale(1.1);
+}
+
+
+.fab-container.active .fab-main {
+    transform: rotate(0deg) scale(1.1); /* Ya no rotamos, solo crece un poco */
+    background-color: #ff69b4;        /* El fondo se vuelve rosa */
+    color: #fff;                      /* El corazón se vuelve blanco */
+    box-shadow: 0 4px 20px rgba(255, 105, 180, 0.6); /* Sombra más fuerte */
+}
