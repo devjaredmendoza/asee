@@ -15,20 +15,34 @@
 <body>
     <header>
         <h1>Áse Tattoo</h1>
-        <nav>
-            <a href="#galeria">Galería</a>
+        <!-- <nav>
             <a href="https://instagram.com/asee.tattoo" target="_blank">Instagram</a>
-        </nav>
+        </nav> -->
     </header>
 
+    <div class="tabs-container">
+        <button class="tab-button active" onclick="cargarSeccion('realizados.json', this)">Realizados</button>
+        <button class="tab-button" onclick="cargarSeccion('disponibles.json', this)">Disponibles</button>
+        <button class="tab-button" onclick="cargarSeccion('arte.json', this)">Proyectos</button>
+        <button class="tab-button" onclick="cargarSeccion('tiktok.json', this)">tiktok</button>
+    </div>
+
     <main id="galeria-dinamica" class="grid-container">
-    </main>
-
-
+        </main>
 
     <footer>
         <p>© 2026 Mi Estudio de Tatuajes - <a href="https://wa.me/5215660130952">Contacto WhatsApp</a></p>
     </footer>
+
+    <script src="script.js"></script>
+    <div id="modal-galeria" class="modal" onclick="cerrarModal()">
+    <span class="close">&times;</span>
+    <div class="modal-content" onclick="event.stopPropagation()">
+        <div id="modal-body">
+            </div>
+        <p id="modal-titulo"></p>
+    </div>
+</div>
 </body>
 </html>
 <script src="script.js"></script>
