@@ -56,7 +56,7 @@ async function cargarSeccion(archivoJson, elementoBoton) {
 
 // Cargar la primera sección por defecto al entrar a la web
 window.onload = () => {
-    cargarSeccion('realizados.json');
+    cargarSeccion('work.json');
 };
 
 function abrirModal(item) {
@@ -94,9 +94,9 @@ function toggleFab() {
     
     // Cambiar el texto opcionalmente si no quieres usar la rotación CSS
     if (container.classList.contains('active')) {
-        icon.innerText = '💖'; // La rotación en CSS lo hará parecer una X
+        icon.innerText = '🎰'; // La rotación en CSS lo hará parecer una X
     } else {
-        icon.innerText = '💖';
+        icon.innerText = '🎰';
     }
 }
 // Función para abrir y cerrar el menú de hamburguesa

@@ -1,0 +1,53 @@
+[
+  {
+    "tipo": "imagen",
+    "url": "resources/0.jpeg",
+    "titulo": ""
+  },
+  {
+    "tipo": "imagen",
+    "url": "resources/1.jpeg",
+    "titulo": ""
+  },
+  {
+    "tipo": "imagen",
+    "url": "resources/2.jpeg",
+    "titulo": ""
+  },
+  {
+    "tipo": "imagen",
+    "url": "resources/3.jpeg",
+    "titulo": ""
+  },
+  {
+    "tipo": "imagen",
+    "url": "resources/4.jpeg",
+    "titulo": ""
+  },
+  {
+    "tipo": "video",
+    "url": "resources/5.mp4",
+    "titulo": ""
+  },
+  {
+    "tipo": "imagen",
+    "url": "resources/6.jpeg",
+    "titulo": ""
+  },
+  {
+    "tipo": "imagen",
+    "url": "resources/7.jpeg",
+    "titulo": ""
+  },
+  {
+    "tipo": "imagen",
+    "url": "resources/8.jpeg",
+    "titulo": ""
+  },
+  {
+    "tipo": "imagen",
+    "url": "resources/9.jpeg",
+    "titulo": ""
+  }
+  
+]
