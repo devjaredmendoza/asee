@@ -2,52 +2,62 @@
   {
     "tipo": "imagen",
     "url": "resources/0.jpeg",
-    "titulo": ""
+    "titulo": "",
+    "descripcion":""
   },
   {
     "tipo": "imagen",
     "url": "resources/1.jpeg",
-    "titulo": ""
+    "titulo": "",
+    "descripcion":""
   },
   {
     "tipo": "imagen",
     "url": "resources/2.jpeg",
-    "titulo": ""
+    "titulo": "",
+    "descripcion":""
   },
   {
     "tipo": "imagen",
     "url": "resources/3.jpeg",
-    "titulo": ""
+    "titulo": "",
+    "descripcion":""
   },
   {
     "tipo": "imagen",
     "url": "resources/4.jpeg",
-    "titulo": ""
+    "titulo": "",
+    "descripcion":""
   },
   {
     "tipo": "video",
     "url": "resources/5.mp4",
-    "titulo": ""
+    "titulo": "tiny sticker compilation",
+    "descripcion":"compilacion de stickers mini"
   },
   {
     "tipo": "imagen",
     "url": "resources/6.jpeg",
-    "titulo": ""
+    "titulo": "",
+    "descripcion":""
   },
   {
     "tipo": "imagen",
     "url": "resources/7.jpeg",
-    "titulo": ""
+    "titulo": "",
+    "descripcion":""
   },
   {
     "tipo": "imagen",
     "url": "resources/8.jpeg",
-    "titulo": ""
+    "titulo": "",
+    "descripcion":""
   },
   {
     "tipo": "imagen",
-    "url": "resources/9.jpeg",
-    "titulo": ""
+    "url": "resources/9.png",
+    "titulo": "",
+    "descripcion":""
   }
   
 ]
